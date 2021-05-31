@@ -1,0 +1,117 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content >
+  <div class="ion-padding" style="text-align: center;position: absolute;left: 0;right: 0;top: 50%;transform: translateY(-50%);">
+
+    <!-- <ion-card class="ion-margin-bottom"> -->
+        <ion-img style="height:15em" src="/assets/download.png"></ion-img>
+<!--            <ion-img src="https://www.pngonly.com/wp-content/uploads/2017/06/transparent-car-png-10207.png"></ion-img>-->
+        <ion-card-content class="ion-padding-vertical">
+<!--                <ion-row>-->
+<!--                    <ion-col size="12" class="ion-text-center ion-margin-bottom">-->
+<!--                        <ion-card-title>Car Title</ion-card-title>-->
+<!--                        <ion-card-subtitle>2 doors | Sport</ion-card-subtitle>-->
+<!--                        <ion-card-subtitle>-->
+<!--                            <ion-icon name="star" color="warning"></ion-icon>-->
+<!--                            <ion-icon name="star" color="warning"></ion-icon>-->
+<!--                            <ion-icon name="star" color="warning"></ion-icon>-->
+<!--                            <ion-icon name="star" color="warning"></ion-icon>-->
+<!--                            <ion-icon name="star-outline" color="warning"></ion-icon>-->
+<!--                            <span> (12.5K)</span>-->
+<!--                        </ion-card-subtitle>-->
+<!--                    </ion-col>-->
+<!--                    <ion-col size="4" class="ion-text-right">-->
+<!--                        <ion-button fill="clear" color="dark" routerLink="/details">-->
+<!--                            <ion-icon slot="icon-only" name="speedometer-outline"></ion-icon>-->
+<!--                        </ion-button>-->
+<!--                    </ion-col>-->
+<!--                    <ion-col size="4" class="ion-text-right">-->
+<!--                        <ion-button fill="clear" color="dark" routerLink="/details">-->
+<!--                            <ion-icon slot="icon-only" name="snow"></ion-icon>-->
+<!--                        </ion-button>-->
+<!--                    </ion-col>-->
+<!--                    <ion-col size="4" class="ion-text-right">-->
+<!--                        <ion-button fill="clear" color="dark" routerLink="/details">-->
+<!--                            <ion-icon slot="icon-only" name="person-outline"></ion-icon>-->
+<!--                        </ion-button>-->
+<!--                    </ion-col>-->
+<!--                </ion-row>-->
+            <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+            <ion-row>
+                <ion-col size-sm="6" offset-sm="3">
+                    <ion-item class="ion-no-padding">
+                        <!--                        <ion-label>Email</ion-label>-->
+                        <ion-icon name="mail"></ion-icon> &nbsp;&nbsp;&nbsp;
+                        <ion-input placeholder="Email"
+                                   type="email"
+                                   ngModel
+                                   name="email"
+                                   required
+                                   email
+                                   #emailCtrl="ngModel"
+                        ></ion-input>
+                    </ion-item>
+                    <ion-item
+                            *ngIf="!emailCtrl.valid && emailCtrl.touched"
+                            lines="none"
+                    >
+                        <ion-label color='danger'
+                                   style="font-size: small;">
+                            <ion-icon name="information-circle-outline"></ion-icon>&nbsp;
+                            Should be a valid email address.
+                        </ion-label>
+                    </ion-item>
+                    <ion-item class="ion-no-padding">
+                        <!--                        <ion-label>Password</ion-label>-->
+                        <ion-icon name="key"></ion-icon> &nbsp;&nbsp;&nbsp;
+                        <ion-input placeholder="Password"
+                                   type="password"
+                                   ngModel
+                                   name="password"
+                                   required
+                                   minlength="6"
+                                   #passwordCtrl="ngModel"
+                        ></ion-input>
+                    </ion-item>
+                    <ion-item
+                            *ngIf="!passwordCtrl.valid && passwordCtrl.touched"
+                            lines="none"
+                    >
+                        <ion-label color='danger'
+                                   style="font-size: small;">
+                            <ion-icon name="information-circle-outline"></ion-icon>&nbsp; Should at least be 6 characters.
+                        </ion-label>
+                    </ion-item>
+
+                </ion-col>
+            </ion-row>
+            <ion-row class="ion-padding-top">
+                <ion-col size-sm="6" offset-sm="3">
+
+                    <ion-button
+                            type="submit"
+                            color="primary"
+                            expand="block"
+                            [disabled]="!f.valid"
+                    >
+                        LOGIN
+                    </ion-button>
+
+                </ion-col>
+            </ion-row>
+            </form>
+        </ion-card-content>
+    <!-- </ion-card> -->
+
+    <!-- <div class="ion-padding ion-text-center">
+        <ion-badge color="dark" mode="ios" >
+            Current version : {{version}} V
+        </ion-badge>
+    </div> -->
+
+</div>
+</ion-content>

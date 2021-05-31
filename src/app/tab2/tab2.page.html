@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      SCAN
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+    <div style="text-align: center;position: absolute;left: 0;right: 0;padding: 50px;">
+      <h1>SCAN IBD CARD</h1>
+      <ion-list>
+        <ion-item>
+          <ion-label>Select IBD</ion-label>
+          <ion-select [(ngModel)]="selectedIBD"  interface="action-sheet" (ngModelChange)="onChange($event)" >
+            <ion-select-option *ngFor="let ibd of ibdList"  [value]="ibd.id"> {{ibd.ibdNo}}</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+      </ion-list>
+      <!-- <ion-button expand="block" color="primary" size="large" (click)="openIBD()">
+        <ion-icon name="add-circle"></ion-icon>&nbsp;&nbsp;&nbsp;Chooce IBD
+      </ion-button> -->
+    </div>
+
+
+</ion-content>

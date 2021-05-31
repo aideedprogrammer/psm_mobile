@@ -1,0 +1,52 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Profile
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Profile</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card>
+    <ion-card-header>
+      <div style="text-align: center;">
+        <img style="border-radius: 60px;width: 120px;height: 120px;" src="../../assets/player105.jpg" />
+      </div>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-note slot="start">Name</ion-note>
+        <ion-label class="ion-text-left">{{name}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-note slot="start">Staff ID</ion-note>
+        <ion-label class="ion-text-left">{{staffId}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-note slot="start">Tel No.</ion-note>
+        <ion-label class="ion-text-left">{{phone}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-note slot="start">Cawangan</ion-note>
+        <ion-label class="ion-text-left">{{cawangan}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-note slot="start">Jawatan</ion-note>
+        <ion-label class="ion-text-left">{{jawatan}}</ion-label>
+      </ion-item>
+    </ion-card-content>
+
+    <ion-button expand="full" color="primary" (click)="onLogout()">
+      <ion-icon name="log-out-outline"></ion-icon>&nbsp;&nbsp;&nbsp;Log Out
+    </ion-button>
+  </ion-card>
+
+
+</ion-content>
