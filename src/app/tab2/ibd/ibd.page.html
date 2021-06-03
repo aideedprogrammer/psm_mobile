@@ -8,99 +8,102 @@
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding-horizontal">
-    <ion-item>
-      <ion-label position="stacked">Process Name</ion-label>
-      <ion-input readonly type="text">{{processName}}</ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label position="stacked">IBD No.</ion-label>
-      <ion-input readonly type="text">{{ibdNo}}</ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="stacked">Date Capture</ion-label>
-      <ion-input readonly type="text">{{dateCapture}}</ion-input>
-    </ion-item>
-  </div>
-
-
   <ion-card>
-    <ion-card-header>
-      Bacaan Wab Basah
-    </ion-card-header>
-    <ion-card-content style="padding-bottom: 0px;">
-      <ion-grid>
-        <ion-row>
-          <ion-col>
-            <div style="padding-top: 10px;">
-              <H2>Suhu</H2>
-            </div>
-          </ion-col>
-          <ion-col>
-            <div>
-              <ion-input placeholder="Type Here" type="number"></ion-input>
-            </div>
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col>
-            <div style="padding-top: 10px;">
-              <H2>Depan</H2>
-            </div>
-          </ion-col>
-          <ion-col>
-            <div>
-              <ion-select placeholder="Select One">
-                <ion-select-option value="18% ke atas">18% ke atas</ion-select-option>
-                <ion-select-option value="17% hingga 15%">17% hingga 15%</ion-select-option>
-                <ion-select-option value="14% ke bawah">14% ke bawah</ion-select-option>
-              </ion-select>
-            </div>
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col>
-            <div style="padding-top: 10px;">
-              <H2>Tengah</H2>
-            </div>
-          </ion-col>
-          <ion-col>
-            <div>
-              <ion-select placeholder="Select One">
-                <ion-select-option value="18% ke atas">18% ke atas</ion-select-option>
-                <ion-select-option value="17% hingga 15%">17% hingga 15%</ion-select-option>
-                <ion-select-option value="14% ke bawah">14% ke bawah</ion-select-option>
-              </ion-select>
-            </div>
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col>
-            <div style="padding-top: 10px;">
-              <H2>Tengah</H2>
-            </div>
-          </ion-col>
-          <ion-col>
-            <div>
-              <ion-select placeholder="Select One">
-                <ion-select-option value="18% ke atas">18% ke atas</ion-select-option>
-                <ion-select-option value="17% hingga 15%">17% hingga 15%</ion-select-option>
-                <ion-select-option value="14% ke bawah">14% ke bawah</ion-select-option>
-              </ion-select>
-            </div>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
+  <ion-card-content class="ion-no-padding">
+    <div class="ion-padding-horizontal">
+      <ion-item>
+        <ion-label position="stacked">Process Name</ion-label>
+        <ion-input readonly type="text">{{processName}}</ion-input>
+      </ion-item>
 
-    </ion-card-content>
-  </ion-card>
+      <ion-item>
+        <ion-label position="stacked">IBD No.</ion-label>
+        <ion-input readonly type="text">{{ibdNo}}</ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Date Capture</ion-label>
+        <ion-input readonly type="text">{{dateCapture}}</ion-input>
+      </ion-item>
+    </div>
 
 
-  <div class="ion-padding-horizontal">
-    <ion-button expand="full" color="primary" expand="block">
-      <ion-icon name="save-outline"></ion-icon>&nbsp;&nbsp;&nbsp;Save
-    </ion-button>
-  </div>
+    <ion-card *ngIf="processName == 'Record Temperature'">
+      <ion-card-header>
+        Bacaan Wab Basah
+      </ion-card-header>
+      <ion-card-content style="padding-bottom: 0px;">
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <div style="padding-top: 10px;">
+                <H2>Suhu</H2>
+              </div>
+            </ion-col>
+            <ion-col>
+              <div>
+                <ion-input placeholder="Type Here" type="number"></ion-input>
+              </div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <div style="padding-top: 10px;">
+                <H2>Depan</H2>
+              </div>
+            </ion-col>
+            <ion-col>
+              <div>
+                <ion-select placeholder="Select One">
+                  <ion-select-option value="18% ke atas">18% ke atas</ion-select-option>
+                  <ion-select-option value="17% hingga 15%">17% hingga 15%</ion-select-option>
+                  <ion-select-option value="14% ke bawah">14% ke bawah</ion-select-option>
+                </ion-select>
+              </div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <div style="padding-top: 10px;">
+                <H2>Tengah</H2>
+              </div>
+            </ion-col>
+            <ion-col>
+              <div>
+                <ion-select placeholder="Select One">
+                  <ion-select-option value="18% ke atas">18% ke atas</ion-select-option>
+                  <ion-select-option value="17% hingga 15%">17% hingga 15%</ion-select-option>
+                  <ion-select-option value="14% ke bawah">14% ke bawah</ion-select-option>
+                </ion-select>
+              </div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <div style="padding-top: 10px;">
+                <H2>Tengah</H2>
+              </div>
+            </ion-col>
+            <ion-col>
+              <div>
+                <ion-select placeholder="Select One">
+                  <ion-select-option value="18% ke atas">18% ke atas</ion-select-option>
+                  <ion-select-option value="17% hingga 15%">17% hingga 15%</ion-select-option>
+                  <ion-select-option value="14% ke bawah">14% ke bawah</ion-select-option>
+                </ion-select>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
 
+      </ion-card-content>
+    </ion-card>
+
+  </ion-card-content>
+</ion-card>
+
+<div class="ion-padding-horizontal">
+  <ion-button expand="full" color="primary" expand="block" (click)="SubmitForm()">
+    <ion-icon name="save-outline"></ion-icon>&nbsp;&nbsp;&nbsp;Save
+  </ion-button>
+</div>
 </ion-content>

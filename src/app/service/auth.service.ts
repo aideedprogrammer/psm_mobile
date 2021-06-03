@@ -8,13 +8,6 @@ export interface Auth {
   password: string
 }
 
-export interface Profile {
-  staffId: string,
-  name: string,
-  phone: string,
-  jawatan: string,
-  cawangan: string
-}
 
 @Injectable({
   providedIn: 'root'
