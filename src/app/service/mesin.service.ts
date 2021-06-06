@@ -46,7 +46,7 @@ export class MesinService {
     formData.append('belakang', datas.belakang);
     formData.append('ibdId', datas.ibdId);
     formData.append('cawangan', this.authService.cawangan);
-    formData.append('staffId', this.authService.staffId);
+    formData.append('staffId', this.authService.name + "(" + this.authService.staffId + ")" );
 
 
     return this.http.post(`${environment.ipServer}/bernas/laporan/add_lopran`, formData)

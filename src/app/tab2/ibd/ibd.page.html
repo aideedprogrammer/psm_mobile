@@ -41,7 +41,7 @@
             </ion-col>
             <ion-col>
               <div>
-                <ion-input placeholder="Type Here" type="number"></ion-input>
+                <ion-input [(ngModel)]="suhu" placeholder="Type Here" type="number"></ion-input>
               </div>
             </ion-col>
           </ion-row>
@@ -53,7 +53,7 @@
             </ion-col>
             <ion-col>
               <div>
-                <ion-select placeholder="Select One">
+                <ion-select placeholder="Select One" [(ngModel)]="depan">
                   <ion-select-option value="18% ke atas">18% ke atas</ion-select-option>
                   <ion-select-option value="17% hingga 15%">17% hingga 15%</ion-select-option>
                   <ion-select-option value="14% ke bawah">14% ke bawah</ion-select-option>
@@ -69,7 +69,7 @@
             </ion-col>
             <ion-col>
               <div>
-                <ion-select placeholder="Select One">
+                <ion-select placeholder="Select One" [(ngModel)]="tengah">
                   <ion-select-option value="18% ke atas">18% ke atas</ion-select-option>
                   <ion-select-option value="17% hingga 15%">17% hingga 15%</ion-select-option>
                   <ion-select-option value="14% ke bawah">14% ke bawah</ion-select-option>
@@ -80,12 +80,12 @@
           <ion-row>
             <ion-col>
               <div style="padding-top: 10px;">
-                <H2>Tengah</H2>
+                <H2>Belakang</H2>
               </div>
             </ion-col>
             <ion-col>
               <div>
-                <ion-select placeholder="Select One">
+                <ion-select placeholder="Select One"  [(ngModel)]="belakang">
                   <ion-select-option value="18% ke atas">18% ke atas</ion-select-option>
                   <ion-select-option value="17% hingga 15%">17% hingga 15%</ion-select-option>
                   <ion-select-option value="14% ke bawah">14% ke bawah</ion-select-option>

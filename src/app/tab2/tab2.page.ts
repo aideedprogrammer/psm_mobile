@@ -26,7 +26,8 @@ export class Tab2Page implements OnInit {
   }
 
   ionViewWillEnter() {
-    this.selectedIBD = "";
+
+    this.selectedIBD = null;
 
     this.mesinService.getMesin()
     .subscribe(data => {
