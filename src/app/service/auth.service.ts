@@ -13,7 +13,7 @@ export interface Auth {
   providedIn: 'root'
 })
 export class AuthService {
-  private _userFlagAuth = true;
+  private _userFlagAuth = false;
 
   public staffId = "";
   public name ="";

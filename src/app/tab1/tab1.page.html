@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Senarai Operasi IBD
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +9,22 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <ion-title size="large">Senarai Operasi IBD</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-list>
+    <ion-item *ngFor="let item of reports;" (click)="openModal(item.id)">
+      <ion-avatar slot="end">
+        <img src="../../assets/settings.png">
+      </ion-avatar>
+      <ion-label>
+        <h3 style="font-weight: 800;">BatNo: {{item.batchNo}}</h3>
+
+        <p style="color: green;">Previous: {{item.processName}}</p>
+        <p style="font-size: 15px;
+        color: blue;">Next: {{item.nextProcessName}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>

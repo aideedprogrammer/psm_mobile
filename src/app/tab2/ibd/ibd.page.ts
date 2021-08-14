@@ -61,8 +61,9 @@ export class IbdPage implements OnInit {
     this.mesinService.sendInfoIbd(datas)
     .subscribe(data => {
       if(data["status"]== "OK"){
+        this.mesinService.getAllLaporan();
         this.openToast("Succesfull saved.");
-        this.router.navigateByUrl('/tabs/tab1');
+        this.router.navigateByUrl('/tabs/tab2');
       }else{
         this.openToast("Unsuccesfull saved.");
       }
@@ -72,6 +73,7 @@ export class IbdPage implements OnInit {
   openToast(title){
     this.toastCtrl.create({
       header: title,
+      color: "success",
       position: 'bottom',
       duration: 1000
   })

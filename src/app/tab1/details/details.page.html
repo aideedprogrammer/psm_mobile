@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Details Process</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header class="ion-padding" style="    font-size: x-large;
+    font-weight: 700;">Details Laporan</ion-card-header>
+  <ion-card-content class="ion-no-padding">
+    <div class="ion-padding-horizontal" *ngFor="let item of detailLaporan">
+      <div>
+        <ion-label position="stacked">BatchNo</ion-label>
+        <ion-input readonly type="text" style="font-weight: bold;">{{item.batchNo}}</ion-input>
+      </div>
+      <div>
+        <ion-label position="stacked">Year / Month</ion-label>
+        <ion-input readonly type="text" style="font-weight: bold;">{{item.year}} / {{item.month}}</ion-input>
+      </div>
+      <div>
+        <ion-label position="stacked">Kakitangan Bertugas</ion-label>
+        <ion-input readonly type="text" style="font-weight: bold;">{{item.created_by}}</ion-input>
+      </div>
+      <div>
+        <ion-label position="stacked">Kerja Mula</ion-label>
+        <ion-input readonly type="text" style="font-weight: bold;">{{item.date_created}}</ion-input>
+      </div>
+    </div>
+  </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header class="ion-padding" style="    font-size: x-large;
+    font-weight: 700;">Details Proses</ion-card-header>
+  <ion-card-content class="ion-no-padding">
+    <div class="ion-padding-horizontal" >
+      <div *ngFor="let item of detailProcess; let i = index;">
+        <ion-label >{{i + 1}}. </ion-label>
+        <ion-label style="color: green;    font-weight: 700;">{{item.processName}} @ {{item.date_captured}}</ion-label>
+      </div>
+    </div>
+    <br>
+    <div class="ion-padding-horizontal" >
+      <ion-label style="color: blue;    font-weight: 700;">NEXT : {{nextProcess}} @ {{nextProcessTime}}</ion-label>
+    </div>
+  </ion-card-content>
+  </ion-card>
+</ion-content>
